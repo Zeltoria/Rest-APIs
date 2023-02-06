@@ -1,0 +1,56 @@
+{
+  "name": "api-mirip-zeks",
+  "version": "2.0.0",
+  "description": "Rest api update by Zeeoneofc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeeone-ofc/api-mirip-zeks.git"
+  },
+  "keywords": [
+    "botwa",
+    "simple",
+    "api",
+    "rest",
+    "api",
+    "website",
+    "api-mirip-zeks"
+  ],
+  "author": "Zeeoneofc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeeone-ofc/api-mirip-zeks/issues"
+  },
+  "dependencies": {
+    "@bochilteam/scraper": "^3.0.0",
+    "axios": "^0.21.1",
+    "brainly-scraper-v2": "^1.1.2",
+    "base-64": "^1.0.0",
+    "base32": "0.0.6",
+    "cookie": "^0.5.0",
+    "crypto": "^1.0.1",
+    "cfonts": "^2.9.1",
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "form-data": "^3.0.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "file-type": "^16.1.0",
+    "lodash": "^4.17.20",
+    "needle": "^2.6.0",
+    "node-gtts": "^2.0.2",
+    "node-tesseract-ocr": "^2.0.0",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "spinnies": "^0.5.1",
+    "ssl-express-www": "^3.0.7",
+    "urlencode": "^1.1.0",
+    "qs": "^6.10.1"
+  },
+  "homepage": "https://github.com/zeeone-ofc/api-mirip-zeks#readme"
+}
