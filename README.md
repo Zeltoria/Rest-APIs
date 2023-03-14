@@ -57,7 +57,7 @@
 
 ## ```Coffee ☕```
 
-- [`SOCIABUZZ`](https://sociabuzz.com/nexagone)
+- [`Saweria`](https://saweria.co/rizka00u)
 
 ## ```Thanks To```
 
@@ -66,3 +66,4 @@
 - [`Farhan`]()
 - [`Ojan`]()
 - [`Nexagone`]()
+- [`Riz']()
