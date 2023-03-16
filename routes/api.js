@@ -88,6 +88,10 @@ router.get("/anime/otakudesu/:path", (req, res) => {
 	const {
 		url,
 		query,
+		apikey
+	} = req.query
+	if (!apikey) {
+		return res.json(loghandler.noapikey);
 	}
 	if (path === "search") {
 		if (!query) {
