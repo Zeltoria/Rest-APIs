@@ -1,5 +1,6 @@
+/*
 var __path = process.cwd(),
-      /*monk = require('monk'),
+	monk = require('monk'),
      { color } = require(__path + '/lib/color.js')
 
 // Connection URL
