@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:check": "eslint",
+    "lint:fix": "eslint views/*.html --fix"
   },
   "repository": {
     "type": "git",
@@ -54,5 +55,10 @@
     "ssl-express-www": "^3.0.7",
     "urlencode": "^1.1.0"
   },
-  "homepage": "https://github.com/zeeone-ofc/api-mirip-zeks#readme"
+  "homepage": "https://github.com/zeeone-ofc/api-mirip-zeks#readme",
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.17.1",
+    "@html-eslint/parser": "^0.17.1",
+    "eslint": "^8.36.0"
+  }
 }

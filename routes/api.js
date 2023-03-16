@@ -67,6 +67,93 @@ for (var i = lenn; i > 0; i--) {
 var randomTextNumber =
 	random + randomlagi + "---------Apriliya-Putri-Fatmawati" + "LOLI--KILLERS";
 
+/** @note
+ * Liat cara nulis code yang bener
+ */
+router.get("/anime/otakudesu/:path", (req, res) => {
+	const otakudesuPath = [
+		"search",
+		"latest",
+		"detail"
+	]
+	const {
+		path
+	} = req.params;
+	if (!otakudesuPath.includes(path)) {
+		return res.status(404).json({
+			status: false,
+			message: "Endpoint not found"
+		})
+	}
+	const {
+		url,
+		query,
+	}
+	if (path === "search") {
+		if (!query) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter url",
+			});
+		}
+		Frieren.otakudesu.search(query).then((data) => {
+			if (data.error) {
+				/** Schema
+				{
+					"error": true,
+					"message": "String"
+				}
+				 */
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "latest") {
+		Frieren.otakudesu.latest().then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "detail") {
+		if (!url) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter url",
+			});
+		}
+		Frieren.otakudesu.detail(url).then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				...data
+			})
+		})
+	}
+})
+/** */
+
 router.get("/cekapikey", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	if (!apikey) return res.json(loghandler.noapikey);
@@ -402,6 +489,7 @@ router.get("/cecan/malaysia", async (req, res, next) => {
 });
 
 //downloader
+
 router.get("/download/facebook", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.url;
@@ -414,6 +502,7 @@ router.get("/download/facebook", async (req, res, next) => {
 		});
 	if (listkey.includes(apikey)) {
 		Frieren.facebook.v1(url).then((data) => {
+			// error handling
 			if (data.error) {
 				return res.json(loghandler.error);
 			}
@@ -423,6 +512,7 @@ router.get("/download/facebook", async (req, res, next) => {
 		res.json(loghandler.apikey);
 	}
 });
+
 router.get("/download/instagram", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.url;
