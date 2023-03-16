@@ -481,7 +481,7 @@ router.get("/download/pinterest", async (req, res, next) => {
 		res.json(loghandler.apikey);
 	}
 });
-router.get("/download/tiktok", async (req, res, next) => {
+router.get("/download/tiktok", (req, res, next) => {
 	var apikey = req.query.apikey;
 	var url = req.query.url;
 	if (!apikey) return res.json(loghandler.noapikey);
@@ -493,9 +493,11 @@ router.get("/download/tiktok", async (req, res, next) => {
 		});
 	if (listkey.includes(apikey)) {
 		Tiktok(url).then((data) => {
+			/*
 			if (!data.status) {
 				return res.json(loghandler.error);
 			}
+			*/
 			res.json(data)
 		})
 	} else {
