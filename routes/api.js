@@ -93,12 +93,15 @@ router.get("/anime/otakudesu/:path", (req, res) => {
 	if (!apikey) {
 		return res.json(loghandler.noapikey);
 	}
+	if (!listkey.includes(apikey)) {
+		return res.json(loghandler.apikey);
+	}
 	if (path === "search") {
 		if (!query) {
 			return res.json({
 				status: false,
 				creator: `${creator}`,
-				message: "masukan parameter url",
+				message: "masukan parameter query",
 			});
 		}
 		Frieren.otakudesu.search(query).then((data) => {
