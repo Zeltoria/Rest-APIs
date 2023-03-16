@@ -418,7 +418,7 @@ router.get("/download/facebook", async (req, res, next) => {
 				async () =>
 					await scr
 						.facebookdlv2(url)
-						.catch(async () => scr.facebookdlv3(url).catch(() => false))
+						.catch(async () => await scr.facebookdlv3(url).catch(() => false))
 			);
 		if (!isAvailable) {
 			res.json(loghandler.error);

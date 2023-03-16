@@ -26,7 +26,7 @@
     "url": "https://github.com/zeeone-ofc/api-mirip-zeks/issues"
   },
   "dependencies": {
-    "@bochilteam/scraper": "^3.0.0",
+    "@bochilteam/scraper": "^4.0.22-alpha.0",
     "@xct007/tiktok-scraper": "^0.0.3",
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
