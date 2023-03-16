@@ -13,6 +13,7 @@ var router = express.Router();
 var creator = global.creator;
 const listkey = global.apikey;
 
+const Frieren = require("@xct007/frieren-scraper");
 const scr = require("@bochilteam/scraper");
 const { color, bgcolor } = require(__path + "/lib/color.js");
 const { fetchJson } = require(__path + "/lib/fetcher.js");
@@ -412,18 +413,12 @@ router.get("/download/facebook", async (req, res, next) => {
 			message: "masukan parameter url",
 		});
 	if (listkey.includes(apikey)) {
-		const isAvailable = await scr
-			.facebookdl(url)
-			.catch(
-				async () =>
-					await scr
-						.facebookdlv2(url)
-						.catch(async () => await scr.facebookdlv3(url).catch(() => false))
-			);
-		if (!isAvailable) {
-			res.json(loghandler.error);
-		}
-		res.json(isAvailable);
+		Frieren.facebook.v1(url).then((data) => {
+			if (data.error) {
+				return res.json(loghandler.error);
+			}
+			res.json(data)
+		})
 	} else {
 		res.json(loghandler.apikey);
 	}
