@@ -412,15 +412,18 @@ router.get("/download/facebook", async (req, res, next) => {
 			message: "masukan parameter url",
 		});
 	if (listkey.includes(apikey)) {
-		const result = await scr.savefrom(url);
-		res
-			.json({
-				result,
-			})
-			.catch((e) => {
-				console.log(e);
-				res.json(loghandler.error);
-			});
+		const isAvailable = await scr
+			.facebookdl(url)
+			.catch(
+				async () =>
+					await scr
+						.facebookdlv2(url)
+						.catch(async () => scr.facebookdlv3(url).catch(() => false))
+			);
+		if (!isAvailable) {
+			res.json(loghandler.error);
+		}
+		res.json(isAvailable);
 	} else {
 		res.json(loghandler.apikey);
 	}
@@ -493,13 +496,11 @@ router.get("/download/tiktok", (req, res, next) => {
 		});
 	if (listkey.includes(apikey)) {
 		Tiktok(url).then((data) => {
-			/*
 			if (!data.status) {
 				return res.json(loghandler.error);
 			}
-			*/
-			res.json(data)
-		})
+			res.json(data);
+		});
 	} else {
 		res.json(loghandler.apikey);
 	}
