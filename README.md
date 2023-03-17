@@ -13,7 +13,7 @@
     </p>
 
 -------
-<h1 align="center">Nothing In Here <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br>I'm Zeltoria</h1>
+<h1 align="center">Nothing In Here <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br></h1>
 <p align="center">
   <img src="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg" /></>
 </p>
@@ -28,36 +28,13 @@
   <a href="https://youtube.com/@Zeltoria"><img src="https://img.shields.io/youtube/channel/subscribers/UCdzWwbApjkyODby7_MoRYlA?style=social" /> <br>
 </p>
 
-## ```HOW TO INSTALL```
-
-# Cyclic App
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://app.cyclic.sh/#/join/zeeone-ofc)
-
-[`Click Here For Tutorial`](https://youtu.be/BCY6V2PDDEA)
-
-<p align="center">
-  <a href="https://youtu.be/BCY6V2PDDEA"><img src="https://telegra.ph/file/a5f2d77a88420560ed8c5.jpg" />
-</p>
-
-# Replit App
-[![Run on Repl.it](https://repl.it/badge/github/zeeone-ofc/Alphabot-Md)](https://replit.com)
-
-[`Click Here For Tutorial`](https://youtu.be/BCY6V2PDDEA)
-
-<p align="center">
-  <a href="https://youtu.be/BCY6V2PDDEA"><img src="https://telegra.ph/file/a5f2d77a88420560ed8c5.jpg" />
-</p>
-
-
-## ```Coffee ☕```
-
-- [`Saweria`](https://saweria.co/rizka00u)
-
 ## ```Thanks To```
 
+- [`ZeeoneOfc`]()
 - [`Zahir`]()
 - [`Eka`]()
 - [`Farhan`]()
 - [`Ojan`]()
 - [`Nexagone`]()
-- [`Riz']()
+- [`Xct007`]()
+- [`Zeltoria`]()
