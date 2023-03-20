@@ -1,19 +1,10 @@
-# ```Zeltoria```
-<p align="center">
-<a href="https://github.com/zeeone-ofc/followers"><img title="Followers" src="https://img.shields.io/github/followers/FLixx4K?color=red&style=flat-square"></a>
-<a href="https://github.com/zeeone-ofc/api-mirip-zeks/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/FLixx4K/api-mirip-zeks?color=blue&style=flat-square"></a>
-<a href="https://github.com/zeeone-ofc/api-mirip-zeks/network/members"><img title="Forks" src="https://img.shields.io/github/forks/FLixx4K/api-mirip-zeks?color=red&style=flat-square"></a>
-<a href="https://github.com/zeeone-ofc/api-mirip-zeks/watchers"><img title="Watching" src="https://img.shields.io/github/watchers/FLixx4K/api-mirip-zeks?label=Watchers&color=blue&style=flat-square"></a>
-<a href="https://github.com/zeeone-ofc/api-mirip-zeks"><img title="Open Source" src="https://badges.frapsoft.com/os/v2/open-source.svg?v=103"></a>
-<a href="https://github.com/zeeone-ofc/api-mirip-zeks/"><img title="Size" src="https://img.shields.io/github/repo-size/FLixx4K/api-mirip-zeks?style=flat-square&color=green"></a>
-<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FFLixx4K%2FRest-api-mirip-zeks&count_bg=%2379C83D&title_bg=%23555555&icon=probot.svg&icon_color=%2300FF6D&title=hits&edge_flat=false"/></a>
-<a href="https://github.com/FLixx4K/api-mirip-zeks/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
-</p>
+# ```Zeltoria Rest Api```
+# ```Demo``` api.zeltoria.my.id
 <p align='center'>
     </p>
 
 -------
-<h1 align="center">Nothing In Here <img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br>I'm Zeltoria</h1>
+<h1 align="center"><img src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif" width="40px" alt="hi"><br></h1>
 <p align="center">
   <img src="https://telegra.ph/file/3a4cd2e2d86cac6805abb.jpg" /></>
 </p>
@@ -28,36 +19,13 @@
   <a href="https://youtube.com/@Zeltoria"><img src="https://img.shields.io/youtube/channel/subscribers/UCdzWwbApjkyODby7_MoRYlA?style=social" /> <br>
 </p>
 
-## ```HOW TO INSTALL```
-
-# Cyclic App
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://app.cyclic.sh/#/join/zeeone-ofc)
-
-[`Click Here For Tutorial`](https://youtu.be/BCY6V2PDDEA)
-
-<p align="center">
-  <a href="https://youtu.be/BCY6V2PDDEA"><img src="https://telegra.ph/file/a5f2d77a88420560ed8c5.jpg" />
-</p>
-
-# Replit App
-[![Run on Repl.it](https://repl.it/badge/github/zeeone-ofc/Alphabot-Md)](https://replit.com)
-
-[`Click Here For Tutorial`](https://youtu.be/BCY6V2PDDEA)
-
-<p align="center">
-  <a href="https://youtu.be/BCY6V2PDDEA"><img src="https://telegra.ph/file/a5f2d77a88420560ed8c5.jpg" />
-</p>
-
-
-## ```Coffee ☕```
-
-- [`Saweria`](https://saweria.co/rizka00u)
-
 ## ```Thanks To```
 
+- [`ZeeoneOfc`]()
 - [`Zahir`]()
 - [`Eka`]()
 - [`Farhan`]()
 - [`Ojan`]()
 - [`Nexagone`]()
-- [`Riz']()
+- [`Xct007`]()
+- [`Zeltoria`]()
