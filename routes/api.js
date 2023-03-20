@@ -159,6 +159,184 @@ router.get("/anime/otakudesu/:path", (req, res) => {
 		})
 	}
 })
+router.get("/anime/komiku/:path", (req, res) => {
+	const komikuId = [
+		"search",
+		"latest",
+		"detail"
+	]
+	const {
+		path
+	} = req.params;
+	if (!komikuId.includes(path)) {
+		return res.status(404).json({
+			status: false,
+			message: "Endpoint not found"
+		})
+	}
+	const {
+		url,
+		query,
+		apikey
+	} = req.query
+	if (!apikey) {
+		return res.json(loghandler.noapikey);
+	}
+	if (!listkey.includes(apikey)) {
+		return res.json(loghandler.apikey);
+	}
+	if (path === "search") {
+		if (!query) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter query",
+			});
+		}
+		Frieren.komikuId.search(query).then((data) => {
+			if (data.error) {
+				/** Schema
+				{
+					"error": true,
+					"message": "String"
+				}
+				 */
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "latest") {
+		Frieren.komikuId.latest().then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "detail") {
+		if (!url) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter url",
+			});
+		}
+		Frieren.komikuId.detail(url).then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				...data
+			})
+		})
+	}
+})
+router.get("/anime/doujindesu/:path", (req, res) => {
+	const doujindesu = [
+		"search",
+		"latest",
+		"detail"
+	]
+	const {
+		path
+	} = req.params;
+	if (!doujindesu.includes(path)) {
+		return res.status(404).json({
+			status: false,
+			message: "Endpoint not found"
+		})
+	}
+	const {
+		url,
+		query,
+		apikey
+	} = req.query
+	if (!apikey) {
+		return res.json(loghandler.noapikey);
+	}
+	if (!listkey.includes(apikey)) {
+		return res.json(loghandler.apikey);
+	}
+	if (path === "search") {
+		if (!query) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter query",
+			});
+		}
+		Frieren.doujindesu.search(query).then((data) => {
+			if (data.error) {
+				/** Schema
+				{
+					"error": true,
+					"message": "String"
+				}
+				 */
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "latest") {
+		Frieren.doujindesu.latest().then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				result: data
+			})
+		})
+	}
+	if (path === "detail") {
+		if (!url) {
+			return res.json({
+				status: false,
+				creator: `${creator}`,
+				message: "masukan parameter url",
+			});
+		}
+		Frieren.doujindesu.detail(url).then((data) => {
+			if (data.error) {
+				return res.json({
+					status: false,
+					...data
+				})
+			}
+			return res.json({
+				status: true,
+				...data
+			})
+		})
+	}
+})
 /** */
 
 router.get("/cekapikey", async (req, res, next) => {
