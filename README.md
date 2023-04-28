@@ -1,15 +1,3 @@
-## Router added
-- anime
-  - komiku `/anime/komiku/:path`
-    - latest
-    - search
-    - detail
-  - doujindesu `/anime/doujindesu/:path`
-    - latest
-    - search
-    - detail
-___
+Example : api.zeltoria.my.id
 
-<div align="center">
-  <img src="https://itsrose.my.id/rose.jpeg" />
-</div>
+Silahkan Pakai Asal Jangan Di Jual Ae Anak Anj :v
