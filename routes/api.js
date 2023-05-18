@@ -13,6 +13,7 @@ var router = express.Router();
 var creator = global.creator;
 const listkey = global.apikey;
 
+const ds = require('dandi-api')
 const Frieren = require("@xct007/frieren-scraper");
 const scr = require("@bochilteam/scraper");
 const { color, bgcolor } = require(__path + "/lib/color.js");
@@ -674,6 +675,28 @@ router.get("/cecan/malaysia", async (req, res, next) => {
 });
 
 //downloader
+router.get("/download/soundcloud", async (req, res, next) => {
+	var apikey = req.query.apikey;
+	var url = req.query.url;
+	if (!apikey) return res.json(loghandler.noapikey);
+	if (!url)
+		return res.json({
+			status: false,
+			creator: `${creator}`,
+			message: "masukan parameter url",
+		});
+	if (listkey.includes(apikey)) {
+		ds.SoundCloud(url).then((data) => {
+			// error handling
+			if (data.error) {
+				return res.json(loghandler.error);
+			}
+			res.json(data)
+		})
+	} else {
+		res.json(loghandler.apikey);
+	}
+});
 
 router.get("/download/facebook", async (req, res, next) => {
 	var apikey = req.query.apikey;
