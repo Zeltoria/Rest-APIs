@@ -13,7 +13,7 @@ var router = express.Router();
 var creator = global.creator;
 const listkey = global.apikey;
 
-const ds = require('dandi-api')
+const api = require('caliph-api')
 const Frieren = require("@xct007/frieren-scraper");
 const scr = require("@bochilteam/scraper");
 const { color, bgcolor } = require(__path + "/lib/color.js");
@@ -775,7 +775,7 @@ router.get("/download/soundcloud", async (req, res, next) => {
 			message: "masukan parameter url",
 		});
 	if (listkey.includes(apikey)) {
-		ds.SoundCloud(url).then((data) => {
+		api.downloader.soundcloud(url).then((data) => {
 			// error handling
 			if (data.error) {
 				return res.json(loghandler.error);
