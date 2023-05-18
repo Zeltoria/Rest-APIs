@@ -1805,6 +1805,27 @@ router.get("/game/tebakgambar", async (req, res, next) => {
 });
 
 // other
+router.get("/other/jadianime", (req, res, next) => {
+	var apikey = req.query.apikey;
+	var url = req.query.url;
+	if (!apikey) return res.json(loghandler.noapikey);
+	if (!url)
+		return res.json({
+			status: false,
+			creator: `${creator}`,
+			message: "masukan parameter url",
+		});
+	if (listkey.includes(apikey)) {
+		h5tuqq.(url).then((data) => {
+			if (!data.status) {
+				return res.json(loghandler.error);
+			}
+			res.json(data);
+		});
+	} else {
+		res.json(data.message);
+	}
+});
 router.get("/other/github-stalk", async (req, res, next) => {
 	var apikey = req.query.apikey;
 	var text = req.query.username;
