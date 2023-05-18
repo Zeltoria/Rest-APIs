@@ -1816,11 +1816,11 @@ router.get("/other/jadianime", (req, res, next) => {
 			message: "masukan parameter url",
 		});
 	if (listkey.includes(apikey)) {
-		h5tuqq.(url).then((data) => {
+		h5tuqq.(url).then((data.result) => {
 			if (!data.status) {
 				return res.json(loghandler.error);
 			}
-			res.json(data);
+			res.json(data.result);
 		});
 	} else {
 		res.json(data.message);
