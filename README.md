@@ -1,3 +1,4 @@
-Example : api.zeltoria.my.id
+Example : https://long-tan-bonobo-garb.cyclic.app/
+Apikey : Rainchy
 
-Silahkan Pakai >,<
+Silahkan Di Pakai :v 
