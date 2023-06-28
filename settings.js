@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-global.creator = "Zeltoria";
+global.creator = "shanachan";
 global.apikey = ["Elistz", "Mwuhehe", "Rainchy"];
 
 let file = require.resolve(__filename);
